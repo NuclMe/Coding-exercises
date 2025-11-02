@@ -157,7 +157,7 @@ function t8() {
   let start = input3.value;
   let finish = input4.value;
   while (start <= finish) {
-    str += start+ "_";
+    str += start + "_";
     start++;
   }
   out8.innerHTML = str;
@@ -173,16 +173,49 @@ document.querySelector(".b-8").onclick = t8;
 // если ввел 8 и 6, то получим
 // 6_7_8_
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку и при необходимости поменять местами значения в переменных местами, а потом запускаем цикл  while.
+let out9 = document.querySelector(".out-9");
+let input5 = document.querySelector(".i-91");
+let input6 = document.querySelector(".i-92");
 
-function t9() {}
+function t9() {
+  let firstNum = input5.value;
+  let secondNum = input6.value;
+  let str = "";
+  let start;
+  let finish;
+  if (firstNum <= secondNum) {
+    start = firstNum;
+    finish = secondNum;
+  } else {
+    start = secondNum;
+    finish = firstNum;
+  }
+  while (start <= finish) {
+    str += start + "_";
+    start++;
+  }
+  out9.innerHTML = str;
+}
 
 document.querySelector(".b-9").onclick = t9;
 
 //  Task 10
 // Кнопка .b-10 запускает функцию t10. Функция должна выводить в .out-10 четные годы от 1950 до 1966 включительно.
 // Разделитель знак подчеркивания. Задача решается через цикл, а четность - через шаг (равный 2).
+let out10 = document.querySelector(".out-10");
 
-function t10() {}
+function t10() {
+  let str = "";
+  let year = 1950;
+  while (year <= 1966) {
+    if (year % 2) {
+    } else {
+      str += year + "_";
+    }
+    year++;
+  }
+  out10.innerHTML = str;
+}
 
 document.querySelector(".b-10").onclick = t10;
 
